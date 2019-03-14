@@ -24,6 +24,6 @@ if ($err) {
 } else {
 
 $currentClimate = $response['currently']['icon'];
-  echo $currentClimate;
+  echo 'The current climate icon is saying its: ' . $currentClimate;
   echo "\n";
 }
