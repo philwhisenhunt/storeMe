@@ -1,10 +1,11 @@
 <?php
 
-//Prepend a base path if Predis is not available in your "include_path".
-require 'Predis/Autoload.php';
-
+require "predis/autoload.php";
 Predis\Autoloader::register();
 
-$client = new Predis\Client();
-$client->set('foo', 'bar');
-$value = $client->get('foo');
+$redis = new Predis\Client(array(
+    "scheme" => "tcp",
+    "host" => "hostname",
+    "port" => port,
+    "password” => “password"));
+echo "Connected to Redis";
