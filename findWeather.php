@@ -23,7 +23,9 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 
-$currentClimate = $response['currently']['icon'];
-  echo 'The current climate icon is saying its: ' . $currentClimate;
-  echo "\n";
+$currentSummary = $response['currently']['summary'];
+echo "\n";
+  echo 'The current weather in Alcatraz is: ' . $currentSummary;
+  echo "\n \n";
 }
+
